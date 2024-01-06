@@ -13,7 +13,7 @@ const VideoCard = ({ info }) => {
   const ago = getAgo(snippet.publishedAt);
 
   return (
-    <div className="p-2 m-2 w-72 shadow-lg">
+    <div className=" m-2 w-80">
       <img src={thumbnails.medium.url} alt="Thumbnail" className="rounded-lg" />
       <ul className="mt-2">
         <li className="font-bold">{title}</li>

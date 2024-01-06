@@ -13,11 +13,11 @@ const VideoContainer = () => {
 
   useEffect(() => {
     getVideos();
-  }, []);
+}, []);
 
   if (!videos.length) return;
   return (
-    <div className="flex flex-wrap ">
+    <div className="flex flex-wrap  justify-between">
       {videos.map((video) => (
         <Link to={"/watch?v=" + video.id}>
           <VideoCard key={video.id} info={video} />

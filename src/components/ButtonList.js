@@ -15,7 +15,7 @@ const list = [
 
 const ButtonList = () => {
   return (
-    <div className="flex m-2 overflow-scroll">
+    <div className="flex justify-between">
       {list.map((button, index) => (
         <Button name={button} key={index} />
       ))}
