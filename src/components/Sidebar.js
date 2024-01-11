@@ -12,7 +12,7 @@ const Sidebar = () => {
   if (!isMenuOption) return null;
 
   return (
-    <div className="p-5 w-1/2 text-lg">
+    <div className="p-5 w-1/2 border text-lg">
       <div className="font-medium">
         <Link to={"/"} className="flex   hover:bg-gray-200 rounded-xl mb-2">
           <div className="p-2 ml-3 text-2xl">

@@ -1,14 +1,11 @@
 import React from "react";
 import { getAgo } from "../utils/ago";
+import { getViews } from "../utils/getViews";
 
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
-  const views = statistics.viewCount;
-  let noOfViews;
-  if (views > 1000000) noOfViews = `${Math.floor(views / 1000000)}M`;
-  else if (views > 1000) noOfViews = `${Math.floor(views / 1000)}K`;
-  else noOfViews = views;
+  const views = getViews(statistics.viewCount);
 
   const ago = getAgo(snippet.publishedAt);
 
@@ -19,7 +16,7 @@ const VideoCard = ({ info }) => {
         <li className="font-bold">{title}</li>
         <li>{channelTitle}</li>
         <div className="flex">
-          <div className="mr-2">{noOfViews} views</div>
+          <div className="mr-2">{views} views</div>
           <div className="">{ago} ago</div>
         </div>
       </ul>
